@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+   <link rel="stylesheet" href="https://rawgit.com/lvoogdt/Leaflet.awesome-markers/2.0/develop/dist/leaflet.awesome-markers.css">
+   <script src="https://rawgithub.com/lvoogdt/Leaflet.awesome-markers/2.0/develop/dist/leaflet.awesome-markers.js"></script>
+
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+
+   <link rel="stylesheet" href="https://birdage.github.io/Leaflet.awesome-markers/dist/leaflet.awesome.rotate.css">
+
+   
+   
+   
+   
+
+   <style>
+
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position:absolute;
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+      }
+
+   </style>
+</head>
+
+<body>
+
+   <div class="folium-map" id="folium_404cf2fa2dc84d20a88aca5621002610" style="width: 100%; height: 100%"></div>
+
+   <script>
+
+      
+
+      var base_tile = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 18,
+          minZoom: 1,
+          attribution: 'Map data (c) <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+      });
+
+      var baseLayer = {
+        "Base Layer": base_tile
+      };
+
+      /*
+      addition of the wms layers
+      */
+
+      
+
+      /*
+      addition of the tile layers
+      */
+      
+
+      /*
+      list of layers to be added
+      */
+      var layer_list = {
+      
+      };
+
+      /*
+      Bounding box.
+      */
+      var southWest = L.latLng(24.5, 121),
+          northEast = L.latLng(25.5, 122),
+          bounds = L.latLngBounds(southWest, northEast);
+
+      /*
+      Creates the map and adds the selected layers
+      */
+      var map = L.map('folium_404cf2fa2dc84d20a88aca5621002610', {
+                                       center:[25.0375167, 121.5637],
+                                       zoom: 12,
+                                       maxBounds: bounds,
+                                       layers: [base_tile]
+                                     });
+
+      L.control.layers(baseLayer, layer_list).addTo(map);
+
+      //cluster group
+      var clusteredmarkers = L.markerClusterGroup();
+      //section for adding clustered markers
+      
+      var marker_1_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_1 = L.marker([25.125539, 
+							121.467283],
+							{'icon':marker_1_icon}
+							);
+      marker_1.bindPopup("&#38364;&#28193;&#31449;");
+      marker_1._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_1)
+      
+      var marker_2_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_2 = L.marker([25.131062, 
+							121.473214],
+							{'icon':marker_2_icon}
+							);
+      marker_2.bindPopup("&#24544;&#32681;&#31449;");
+      marker_2._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_2)
+      
+      var marker_3_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_3 = L.marker([25.13766, 
+							121.485365],
+							{'icon':marker_3_icon}
+							);
+      marker_3.bindPopup("&#24489;&#33288;&#23831;&#31449;");
+      marker_3._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_3)
+      
+      var marker_4_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_4 = L.marker([25.136996, 
+							121.50343],
+							{'icon':marker_4_icon}
+							);
+      marker_4.bindPopup("&#26032;&#21271;&#25237;&#31449;");
+      marker_4._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_4)
+      
+      var marker_5_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_5 = L.marker([25.132068, 
+							121.498234],
+							{'icon':marker_5_icon}
+							);
+      marker_5.bindPopup("&#21271;&#25237;&#31449;");
+      marker_5._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_5)
+      
+      var marker_6_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_6 = L.marker([25.1261, 
+							121.500942],
+							{'icon':marker_6_icon}
+							);
+      marker_6.bindPopup("&#22855;&#23721;&#31449;");
+      marker_6._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_6)
+      
+      var marker_7_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_7 = L.marker([25.120823, 
+							121.506824],
+							{'icon':marker_7_icon}
+							);
+      marker_7.bindPopup("&#21805;&#21737;&#23736;&#31449;");
+      marker_7._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_7)
+      
+      var marker_8_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_8 = L.marker([25.114852, 
+							121.515189],
+							{'icon':marker_8_icon}
+							);
+      marker_8.bindPopup("&#30707;&#29260;&#31449;");
+      marker_8._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_8)
+      
+      var marker_9_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_9 = L.marker([25.109317, 
+							121.519024],
+							{'icon':marker_9_icon}
+							);
+      marker_9.bindPopup("&#26126;&#24503;&#31449;");
+      marker_9._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_9)
+      
+      var marker_10_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_10 = L.marker([25.102112, 
+							121.522608],
+							{'icon':marker_10_icon}
+							);
+      marker_10.bindPopup("&#33437;&#23665;&#31449;");
+      marker_10._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_10)
+      
+      var marker_11_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_11 = L.marker([25.094093, 
+							121.525974],
+							{'icon':marker_11_icon}
+							);
+      marker_11.bindPopup("&#22763;&#26519;&#31449;");
+      marker_11._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_11)
+      
+      var marker_12_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_12 = L.marker([25.085144, 
+							121.525154],
+							{'icon':marker_12_icon}
+							);
+      marker_12.bindPopup("&#21133;&#28525;&#31449;");
+      marker_12._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_12)
+      
+      var marker_13_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_13 = L.marker([25.070823, 
+							121.520082],
+							{'icon':marker_13_icon}
+							);
+      marker_13.bindPopup("&#22291;&#23665;&#31449;");
+      marker_13._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_13)
+      
+      var marker_14_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_14 = L.marker([25.062605, 
+							121.519547],
+							{'icon':marker_14_icon}
+							);
+      marker_14.bindPopup("&#27665;&#27402;&#35199;&#36335;&#31449;");
+      marker_14._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_14)
+      
+      var marker_15_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_15 = L.marker([25.057496, 
+							121.520579],
+							{'icon':marker_15_icon}
+							);
+      marker_15.bindPopup("&#38617;&#36899;&#31449;");
+      marker_15._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_15)
+      
+      var marker_16_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_16 = L.marker([25.052423, 
+							121.520302],
+							{'icon':marker_16_icon}
+							);
+      marker_16.bindPopup("&#20013;&#23665;&#31449;");
+      marker_16._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_16)
+      
+      var marker_17_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_17 = L.marker([25.046485, 
+							121.517253],
+							{'icon':marker_17_icon}
+							);
+      marker_17.bindPopup("&#21488;&#21271;&#36554;&#31449;");
+      marker_17._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_17)
+      
+      var marker_18_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_18 = L.marker([25.040962, 
+							121.515774],
+							{'icon':marker_18_icon}
+							);
+      marker_18.bindPopup("&#21488;&#22823;&#37291;&#38498;&#31449;");
+      marker_18._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_18)
+      
+      var marker_19_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_19 = L.marker([25.034899, 
+							121.517187],
+							{'icon':marker_19_icon}
+							);
+      marker_19.bindPopup("&#20013;&#27491;&#32000;&#24565;&#22530;&#31449;");
+      marker_19._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_19)
+      
+      var marker_20_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_20 = L.marker([25.027499, 
+							121.522304],
+							{'icon':marker_20_icon}
+							);
+      marker_20.bindPopup("&#21476;&#20141;&#31449;");
+      marker_20._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_20)
+      
+      var marker_21_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_21 = L.marker([25.019779, 
+							121.528519],
+							{'icon':marker_21_icon}
+							);
+      marker_21.bindPopup("&#21488;&#38651;&#22823;&#27155;&#31449;");
+      marker_21._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_21)
+      
+      var marker_22_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_22 = L.marker([25.014685, 
+							121.534767],
+							{'icon':marker_22_icon}
+							);
+      marker_22.bindPopup("&#20844;&#39208;&#31449;");
+      marker_22._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_22)
+      
+      var marker_23_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_23 = L.marker([25.002793, 
+							121.538626],
+							{'icon':marker_23_icon}
+							);
+      marker_23.bindPopup("&#33836;&#38534;&#31449;");
+      marker_23._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_23)
+      
+      var marker_24_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_24 = L.marker([24.99223, 
+							121.540694],
+							{'icon':marker_24_icon}
+							);
+      marker_24.bindPopup("&#26223;&#32654;&#31449;");
+      marker_24._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_24)
+      
+      var marker_25_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_25 = L.marker([24.998276, 
+							121.579897],
+							{'icon':marker_25_icon}
+							);
+      marker_25.bindPopup("&#21205;&#29289;&#22290;&#31449;");
+      marker_25._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_25)
+      
+      var marker_26_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_26 = L.marker([24.998202, 
+							121.573381],
+							{'icon':marker_26_icon}
+							);
+      marker_26.bindPopup("&#26408;&#26613;&#31449;");
+      marker_26._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_26)
+      
+      var marker_27_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_27 = L.marker([24.998599, 
+							121.568384],
+							{'icon':marker_27_icon}
+							);
+      marker_27.bindPopup("&#33836;&#33459;&#31038;&#21312;&#31449;");
+      marker_27._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_27)
+      
+      var marker_28_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_28 = L.marker([24.999333, 
+							121.557732],
+							{'icon':marker_28_icon}
+							);
+      marker_28.bindPopup("&#33836;&#33459;&#37291;&#38498;&#31449;");
+      marker_28._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_28)
+      
+      var marker_29_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_29 = L.marker([25.00512, 
+							121.557015],
+							{'icon':marker_29_icon}
+							);
+      marker_29.bindPopup("&#36763;&#20133;&#31449;");
+      marker_29._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_29)
+      
+      var marker_30_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_30 = L.marker([25.01864, 
+							121.5586],
+							{'icon':marker_30_icon}
+							);
+      marker_30.bindPopup("&#40607;&#20809;&#31449;");
+      marker_30._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_30)
+      
+      var marker_31_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_31 = L.marker([25.023878, 
+							121.552755],
+							{'icon':marker_31_icon}
+							);
+      marker_31.bindPopup("&#20845;&#24373;&#29313;&#31449;");
+      marker_31._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_31)
+      
+      var marker_32_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_32 = L.marker([25.026134, 
+							121.543472],
+							{'icon':marker_32_icon}
+							);
+      marker_32.bindPopup("&#31185;&#25216;&#22823;&#27155;&#31449;");
+      marker_32._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_32)
+      
+      var marker_33_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_33 = L.marker([25.033164, 
+							121.544005],
+							{'icon':marker_33_icon}
+							);
+      marker_33.bindPopup("&#22823;&#23433;&#31449;");
+      marker_33._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_33)
+      
+      var marker_34_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_34 = L.marker([25.033164, 
+							121.544005],
+							{'icon':marker_34_icon}
+							);
+      marker_34.bindPopup("&#22823;&#23433;&#31449;(&#20449;&#32681;)");
+      marker_34._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_34)
+      
+      var marker_35_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_35 = L.marker([25.041263, 
+							121.543247],
+							{'icon':marker_35_icon}
+							);
+      marker_35.bindPopup("&#24544;&#23389;&#24489;&#33288;&#31449;");
+      marker_35._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_35)
+      
+      var marker_36_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_36 = L.marker([25.052392, 
+							121.544527],
+							{'icon':marker_36_icon}
+							);
+      marker_36.bindPopup("&#21335;&#20140;&#24489;&#33288;&#31449;");
+      marker_36._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_36)
+      
+      var marker_37_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_37 = L.marker([25.060836, 
+							121.544022],
+							{'icon':marker_37_icon}
+							);
+      marker_37.bindPopup("&#20013;&#23665;&#22283;&#20013;&#31449;");
+      marker_37._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_37)
+      
+      var marker_38_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_38 = L.marker([25.040958, 
+							121.565295],
+							{'icon':marker_38_icon}
+							);
+      marker_38.bindPopup("&#24066;&#25919;&#24220;&#31449;");
+      marker_38._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_38)
+      
+      var marker_39_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_39 = L.marker([25.041116, 
+							121.557942],
+							{'icon':marker_39_icon}
+							);
+      marker_39.bindPopup("&#22283;&#29238;&#32000;&#24565;&#39208;");
+      marker_39._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_39)
+      
+      var marker_40_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_40 = L.marker([25.041347, 
+							121.551494],
+							{'icon':marker_40_icon}
+							);
+      marker_40.bindPopup("&#24544;&#23389;&#25958;&#21270;&#31449;");
+      marker_40._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_40)
+      
+      var marker_41_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_41 = L.marker([25.042746, 
+							121.531944],
+							{'icon':marker_41_icon}
+							);
+      marker_41.bindPopup("&#24544;&#23389;&#26032;&#29983;&#31449;");
+      marker_41._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_41)
+      
+      var marker_42_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_42 = L.marker([25.034157, 
+							121.527972],
+							{'icon':marker_42_icon}
+							);
+      marker_42.bindPopup("&#26481;&#38272;&#31449;");
+      marker_42._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_42)
+      
+      var marker_43_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_43 = L.marker([25.044999, 
+							121.523221],
+							{'icon':marker_43_icon}
+							);
+      marker_43.bindPopup("&#21892;&#23566;&#23546;&#31449;");
+      marker_43._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_43)
+      
+      var marker_44_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_44 = L.marker([25.042309, 
+							121.508805],
+							{'icon':marker_44_icon}
+							);
+      marker_44.bindPopup("&#35199;&#38272;&#31449;");
+      marker_44._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_44)
+      
+      var marker_45_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_45 = L.marker([25.035497, 
+							121.499564],
+							{'icon':marker_45_icon}
+							);
+      marker_45.bindPopup("&#40845;&#23665;&#23546;&#31449;");
+      marker_45._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_45)
+      
+      var marker_46_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_46 = L.marker([25.035359, 
+							121.511382],
+							{'icon':marker_46_icon}
+							);
+      marker_46.bindPopup("&#23567;&#21335;&#38272;&#31449;");
+      marker_46._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_46)
+      
+      var marker_47_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_47 = L.marker([25.040836, 
+							121.576648],
+							{'icon':marker_47_icon}
+							);
+      marker_47.bindPopup("&#27704;&#26149;&#31449;");
+      marker_47._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_47)
+      
+      var marker_48_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_48 = L.marker([25.04528, 
+							121.582872],
+							{'icon':marker_48_icon}
+							);
+      marker_48.bindPopup("&#24460;&#23665;&#22500;&#31449;");
+      marker_48._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_48)
+      
+      var marker_49_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_49 = L.marker([25.050608, 
+							121.593627],
+							{'icon':marker_49_icon}
+							);
+      marker_49.bindPopup("&#26118;&#38525;&#31449;");
+      marker_49._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_49)
+      
+      var marker_50_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_50 = L.marker([25.051943, 
+							121.607446],
+							{'icon':marker_50_icon}
+							);
+      marker_50.bindPopup("&#21335;&#28207;&#31449;");
+      marker_50._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_50)
+      
+      var marker_51_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_51 = L.marker([25.055104, 
+							121.618266],
+							{'icon':marker_51_icon}
+							);
+      marker_51.bindPopup("&#21335;&#28207;&#23637;&#35261;&#39208;&#31449;");
+      marker_51._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_51)
+      
+      var marker_52_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_52 = L.marker([25.033316, 
+							121.553587],
+							{'icon':marker_52_icon}
+							);
+      marker_52.bindPopup("&#20449;&#32681;&#23433;&#21644;&#31449;");
+      marker_52._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_52)
+      
+      var marker_53_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_53 = L.marker([25.033143, 
+							121.5632],
+							{'icon':marker_53_icon}
+							);
+      marker_53.bindPopup("&#21488;&#21271;101/&#19990;&#36031;&#31449;");
+      marker_53._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_53)
+      
+      var marker_54_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_54 = L.marker([25.032733, 
+							121.569546],
+							{'icon':marker_54_icon}
+							);
+      marker_54.bindPopup("&#35937;&#23665;&#31449;");
+      marker_54._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_54)
+      
+      var marker_55_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_55 = L.marker([25.063067, 
+							121.552116],
+							{'icon':marker_55_icon}
+							);
+      marker_55.bindPopup("&#22823;&#23433;&#26862;&#26519;&#20844;&#22290;&#31449;");
+      marker_55._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_55)
+      
+      var marker_56_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_56 = L.marker([25.063067, 
+							121.552116],
+							{'icon':marker_56_icon}
+							);
+      marker_56.bindPopup("&#26494;&#23665;&#27231;&#22580;&#31449;");
+      marker_56._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_56)
+      
+      var marker_57_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_57 = L.marker([25.079658, 
+							121.546882],
+							{'icon':marker_57_icon}
+							);
+      marker_57.bindPopup("&#22823;&#30452;&#31449;");
+      marker_57._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_57)
+      
+      var marker_58_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_58 = L.marker([25.082022, 
+							121.567139],
+							{'icon':marker_58_icon}
+							);
+      marker_58.bindPopup("&#35199;&#28246;&#31449;");
+      marker_58._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_58)
+      
+      var marker_59_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_59 = L.marker([25.080116, 
+							121.575722],
+							{'icon':marker_59_icon}
+							);
+      marker_59.bindPopup("&#28207;&#22680;&#31449;");
+      marker_59._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_59)
+      
+      var marker_60_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_60 = L.marker([25.078349, 
+							121.584465],
+							{'icon':marker_60_icon}
+							);
+      marker_60.bindPopup("&#25991;&#24503;&#31449;");
+      marker_60._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_60)
+      
+      var marker_61_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_61 = L.marker([25.083822, 
+							121.594299],
+							{'icon':marker_61_icon}
+							);
+      marker_61.bindPopup("&#20839;&#28246;&#31449;");
+      marker_61._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_61)
+      
+      var marker_62_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_62 = L.marker([25.083679, 
+							121.602242],
+							{'icon':marker_62_icon}
+							);
+      marker_62.bindPopup("&#22823;&#28246;&#20844;&#22290;&#31449;");
+      marker_62._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_62)
+      
+      var marker_63_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_63 = L.marker([25.072543, 
+							121.607194],
+							{'icon':marker_63_icon}
+							);
+      marker_63.bindPopup("&#33899;&#27954;&#31449;");
+      marker_63._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_63)
+      
+      var marker_64_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_64 = L.marker([25.06709, 
+							121.611888],
+							{'icon':marker_64_icon}
+							);
+      marker_64.bindPopup("&#26481;&#28246;&#31449;");
+      marker_64._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_64)
+      
+      var marker_65_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_65 = L.marker([25.07662, 
+							121.526801],
+							{'icon':marker_65_icon}
+							);
+      marker_65.bindPopup("&#21133;&#21335;&#36335;&#31449;");
+      marker_65._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_65)
+      
+      var marker_66_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_66 = L.marker([25.060354, 
+							121.616028],
+							{'icon':marker_66_icon}
+							);
+      marker_66.bindPopup("&#21335;&#28207;&#36575;&#39636;&#22290;&#21312;&#31449;");
+      marker_66._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_66)
+      
+      var marker_67_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_67 = L.marker([24.996052, 
+							121.576164],
+							{'icon':marker_67_icon}
+							);
+      marker_67.bindPopup("&#35987;&#31354;&#32412;&#36554;&#21205;&#29289;&#22290;&#31449;");
+      marker_67._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_67)
+      
+      var marker_68_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_68 = L.marker([25.051352, 
+							121.532918],
+							{'icon':marker_68_icon}
+							);
+      marker_68.bindPopup("&#26494;&#27743;&#21335;&#20140;&#31449;");
+      marker_68._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_68)
+      
+      var marker_69_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_69 = L.marker([25.059975, 
+							121.533192],
+							{'icon':marker_69_icon}
+							);
+      marker_69.bindPopup("&#34892;&#22825;&#23470;&#31449;");
+      marker_69._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_69)
+      
+      var marker_70_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_70 = L.marker([25.062701, 
+							121.526682],
+							{'icon':marker_70_icon}
+							);
+      marker_70.bindPopup("&#20013;&#23665;&#22283;&#23567;&#31449;");
+      marker_70._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_70)
+      
+      var marker_71_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_71 = L.marker([25.063195, 
+							121.512619],
+							{'icon':marker_71_icon}
+							);
+      marker_71.bindPopup("&#22823;&#27211;&#38957;&#31449;");
+      marker_71._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_71)
+      
+      var marker_72_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_72 = L.marker([25.049408, 
+							121.510256],
+							{'icon':marker_72_icon}
+							);
+      marker_72.bindPopup("&#21271;&#38272;&#31449;");
+      marker_72._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_72)
+      
+      var marker_73_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_73 = L.marker([25.051515, 
+							121.551023],
+							{'icon':marker_73_icon}
+							);
+      marker_73.bindPopup("&#21488;&#21271;&#23567;&#24040;&#34507;&#31449;");
+      marker_73._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_73)
+      
+      var marker_74_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_74 = L.marker([25.051539, 
+							121.563305],
+							{'icon':marker_74_icon}
+							);
+      marker_74.bindPopup("&#21335;&#20140;&#19977;&#27665;&#31449;");
+      marker_74._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_74)
+      
+      var marker_75_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_75 = L.marker([25.050361, 
+							121.578119],
+							{'icon':marker_75_icon}
+							);
+      marker_75.bindPopup("&#26494;&#23665;&#31449;");
+      marker_75._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_75)
+      
+      var marker_76_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_76 = L.marker([25.025879, 
+							121.506281],
+							{'icon':marker_76_icon}
+							);
+      marker_76.bindPopup("&#38738;&#24180;&#20844;&#22290;");
+      marker_76._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_76)
+      
+      var marker_77_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_77 = L.marker([25.059878, 
+							121.551933],
+							{'icon':marker_77_icon}
+							);
+      marker_77.bindPopup("&#27665;&#27402;&#20844;&#22290;");
+      marker_77._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_77)
+      
+      var marker_78_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_78 = L.marker([25.040898, 
+							121.515403],
+							{'icon':marker_78_icon}
+							);
+      marker_78.bindPopup("&#20108;&#20108;&#20843;&#21644;&#24179;&#20844;&#22290;");
+      marker_78._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_78)
+      
+      var marker_79_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_79 = L.marker([25.068788, 
+							121.53243],
+							{'icon':marker_79_icon}
+							);
+      marker_79.bindPopup("&#26032;&#29983;&#20844;&#22290;");
+      marker_79._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_79)
+      
+      var marker_80_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_80 = L.marker([25.069227, 
+							121.523767],
+							{'icon':marker_80_icon}
+							);
+      marker_80.bindPopup("&#32654;&#34899;&#20844;&#22290;");
+      marker_80._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_80)
+      
+      var marker_81_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_81 = L.marker([25.075124, 
+							121.530697],
+							{'icon':marker_81_icon}
+							);
+      marker_81.bindPopup("&#22823;&#20339;&#27827;&#28657;&#20844;&#22290;");
+      marker_81._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_81)
+      
+      var marker_82_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_82 = L.marker([24.995231, 
+							121.5431],
+							{'icon':marker_82_icon}
+							);
+      marker_82.bindPopup("&#26223;&#33775;&#20844;&#22290;");
+      marker_82._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_82)
+      
+      var marker_83_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_83 = L.marker([25.000615, 
+							121.551876],
+							{'icon':marker_83_icon}
+							);
+      marker_83.bindPopup("&#33288;&#38534;&#20844;&#22290;");
+      marker_83._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_83)
+      
+      var marker_84_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_84 = L.marker([25.032738, 
+							121.536303],
+							{'icon':marker_84_icon}
+							);
+      marker_84.bindPopup("&#22823;&#23433;&#26862;&#26519;&#20844;&#22290;");
+      marker_84._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_84)
+      
+      var marker_85_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_85 = L.marker([25.046018, 
+							121.591209],
+							{'icon':marker_85_icon}
+							);
+      marker_85.bindPopup("&#21335;&#28207;&#20844;&#22290;");
+      marker_85._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_85)
+      
+      var marker_86_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_86 = L.marker([25.042417, 
+							121.587277],
+							{'icon':marker_86_icon}
+							);
+      marker_86.bindPopup("&#29577;&#25104;&#20844;&#22290;");
+      marker_86._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_86)
+      
+      var marker_87_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_87 = L.marker([25.082695, 
+							121.582865],
+							{'icon':marker_87_icon}
+							);
+      marker_87.bindPopup("&#30887;&#28246;&#20844;&#22290;");
+      marker_87._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_87)
+      
+      var marker_88_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_88 = L.marker([25.141778, 
+							121.50968],
+							{'icon':marker_88_icon}
+							);
+      marker_88.bindPopup("&#27849;&#28304;&#20844;&#22290;");
+      marker_88._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_88)
+      
+      var marker_89_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_89 = L.marker([25.150675, 
+							121.548623],
+							{'icon':marker_89_icon}
+							);
+      marker_89.bindPopup("&#21069;&#23665;&#20844;&#22290;");
+      marker_89._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_89)
+      
+      var marker_90_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_90 = L.marker([25.125628, 
+							121.530515],
+							{'icon':marker_90_icon}
+							);
+      marker_90.bindPopup("&#22825;&#27597;&#20844;&#22290;");
+      marker_90._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_90)
+      
+      var marker_91_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_91 = L.marker([25.037214, 
+							121.564472],
+							{'icon':marker_91_icon}
+							);
+      marker_91.bindPopup("&#24066;&#25919;&#22823;&#27155;");
+      marker_91._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_91)
+      
+      var marker_92_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_92 = L.marker([25.032211, 
+							121.518347],
+							{'icon':marker_92_icon}
+							);
+      marker_92.bindPopup("&#20013;&#27491;&#21312;&#20844;&#25152;");
+      marker_92._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_92)
+      
+      var marker_93_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_93 = L.marker([25.138884, 
+							121.502129],
+							{'icon':marker_93_icon}
+							);
+      marker_93.bindPopup("&#24489;&#33288;&#20844;&#22290;");
+      marker_93._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_93)
+      
+      var marker_94_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_94 = L.marker([25.143723, 
+							121.521581],
+							{'icon':marker_94_icon}
+							);
+      marker_94.bindPopup("&#30827;&#30970;&#35895;&#36938;&#25001;&#21312;");
+      marker_94._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_94)
+      
+      var marker_95_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_95 = L.marker([25.050094, 
+							121.521021],
+							{'icon':marker_95_icon}
+							);
+      marker_95.bindPopup("&#20013;&#23665;&#24066;&#22580;");
+      marker_95._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_95)
+      
+      var marker_96_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_96 = L.marker([25.0641, 
+							121.53844],
+							{'icon':marker_96_icon}
+							);
+      marker_96.bindPopup("&#27054;&#26143;&#33457;&#22290;");
+      marker_96._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_96)
+      
+      var marker_97_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_97 = L.marker([25.062557, 
+							121.568151],
+							{'icon':marker_97_icon}
+							);
+      marker_97.bindPopup("&#19977;&#27665;&#20844;&#22290;");
+      marker_97._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_97)
+      
+      var marker_98_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_98 = L.marker([25.05289, 
+							121.526297],
+							{'icon':marker_98_icon}
+							);
+      marker_98.bindPopup("&#26519;&#26862;&#20844;&#22290;");
+      marker_98._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_98)
+      
+      var marker_99_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_99 = L.marker([25.068674, 
+							121.574422],
+							{'icon':marker_99_icon}
+							);
+      marker_99.bindPopup("&#20839;&#28246;&#36939;&#21205;&#20844;&#22290;");
+      marker_99._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_99)
+      
+      var marker_100_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_100 = L.marker([25.044894, 
+							121.530377],
+							{'icon':marker_100_icon}
+							);
+      marker_100.bindPopup("&#26032;&#29983;&#39640;&#26550;&#31811;&#29699;&#22580;");
+      marker_100._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_100)
+      
+      var marker_101_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_101 = L.marker([25.02072, 
+							121.50487],
+							{'icon':marker_101_icon}
+							);
+      marker_101.bindPopup("&#38738;&#24180;&#20844;&#22290;");
+      marker_101._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_101)
+      
+      var marker_102_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_102 = L.marker([25.02701, 
+							121.558836],
+							{'icon':marker_102_icon}
+							);
+      marker_102.bindPopup("&#20449;&#32681;414&#34399;");
+      marker_102._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_102)
+      
+      var marker_103_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_103 = L.marker([25.13655, 
+							121.502348],
+							{'icon':marker_103_icon}
+							);
+      marker_103.bindPopup("&#19971;&#26143;&#20844;&#22290;");
+      marker_103._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_103)
+      
+      var marker_104_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_104 = L.marker([25.097599, 
+							121.518898],
+							{'icon':marker_104_icon}
+							);
+      marker_104.bindPopup("&#32654;&#23833;&#20844;&#22290;");
+      marker_104._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_104)
+      
+      var marker_105_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_105 = L.marker([24.979634, 
+							121.55648],
+							{'icon':marker_105_icon}
+							);
+      marker_105.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#21147;&#34892;&#20998;&#39208;");
+      marker_105._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_105)
+      
+      var marker_106_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_106 = L.marker([25.059315, 
+							121.562908],
+							{'icon':marker_106_icon}
+							);
+      marker_106.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#19977;&#27665;&#20998;&#39208;");
+      marker_106._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_106)
+      
+      var marker_107_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_107 = L.marker([25.029075, 
+							121.561188],
+							{'icon':marker_107_icon}
+							);
+      marker_107.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#19977;&#33288;&#20998;&#39208;");
+      marker_107._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_107)
+      
+      var marker_108_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_108 = L.marker([25.096278, 
+							121.522253],
+							{'icon':marker_108_icon}
+							);
+      marker_108.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#22763;&#26519;&#20998;&#39208;");
+      marker_108._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_108)
+      
+      var marker_109_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_109 = L.marker([25.074304, 
+							121.513555],
+							{'icon':marker_109_icon}
+							);
+      marker_109.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#22823;&#21516;&#20998;&#39208;");
+      marker_109._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_109)
+      
+      var marker_110_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_110 = L.marker([25.016022, 
+							121.550788],
+							{'icon':marker_110_icon}
+							);
+      marker_110.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#22823;&#23433;&#20998;&#39208;");
+      marker_110._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_110)
+      
+      var marker_111_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_111 = L.marker([25.08185, 
+							121.546687],
+							{'icon':marker_111_icon}
+							);
+      marker_111.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#22823;&#30452;&#20998;&#39208;");
+      marker_111._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_111)
+      
+      var marker_112_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_112 = L.marker([25.064426, 
+							121.533457],
+							{'icon':marker_112_icon}
+							);
+      marker_112.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#20013;&#23665;&#20998;&#39208;");
+      marker_112._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_112)
+      
+      var marker_113_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_113 = L.marker([25.069239, 
+							121.589128],
+							{'icon':marker_113_icon}
+							);
+      marker_113.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#20839;&#28246;&#20998;&#39208;");
+      marker_113._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_113)
+      
+      var marker_114_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_114 = L.marker([25.024541, 
+							121.568918],
+							{'icon':marker_114_icon}
+							);
+      marker_114.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#20845;&#21512;&#20998;&#39208;");
+      marker_114._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_114)
+      
+      var marker_115_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_115 = L.marker([25.123345, 
+							121.533007],
+							{'icon':marker_115_icon}
+							);
+      marker_115.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#22825;&#27597;&#20998;&#39208;");
+      marker_115._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_115)
+      
+      var marker_116_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_116 = L.marker([24.999697, 
+							121.547614],
+							{'icon':marker_116_icon}
+							);
+      marker_116.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#25991;&#23665;&#20998;&#39208;");
+      marker_116._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_116)
+      
+      var marker_117_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_117 = L.marker([24.986603, 
+							121.56814],
+							{'icon':marker_117_icon}
+							);
+      marker_117.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#26408;&#26613;&#20998;&#39208;");
+      marker_117._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_117)
+      
+      var marker_118_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_118 = L.marker([25.136298, 
+							121.506296],
+							{'icon':marker_118_icon}
+							);
+      marker_118.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#21271;&#25237;&#20998;&#39208;");
+      marker_118._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_118)
+      
+      var marker_119_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_119 = L.marker([25.022545, 
+							121.523804],
+							{'icon':marker_119_icon}
+							);
+      marker_119.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#21476;&#20141;&#20998;&#39208;");
+      marker_119._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_119)
+      
+      var marker_120_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_120 = L.marker([25.057122, 
+							121.55113],
+							{'icon':marker_120_icon}
+							);
+      marker_120.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#27665;&#29983;&#20998;&#39208;");
+      marker_120._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_120)
+      
+      var marker_121_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_121 = L.marker([25.118068, 
+							121.517176],
+							{'icon':marker_121_icon}
+							);
+      marker_121.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#27704;&#26126;&#38321;&#35261;&#23460;");
+      marker_121._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_121)
+      
+      var marker_122_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_122 = L.marker([24.987736, 
+							121.550974],
+							{'icon':marker_122_icon}
+							);
+      marker_122.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#27704;&#24314;&#20998;&#39208;");
+      marker_122._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_122)
+      
+      var marker_123_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_123 = L.marker([25.043069, 
+							121.577577],
+							{'icon':marker_123_icon}
+							);
+      marker_123.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#27704;&#26149;&#20998;&#39208;");
+      marker_123._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_123)
+      
+      var marker_124_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_124 = L.marker([25.113142, 
+							121.522624],
+							{'icon':marker_124_icon}
+							);
+      marker_124.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#30707;&#29260;&#20998;&#39208;");
+      marker_124._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_124)
+      
+      var marker_125_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_125 = L.marker([25.119288, 
+							121.508402],
+							{'icon':marker_125_icon}
+							);
+      marker_125.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#21513;&#21033;&#20998;&#39208;");
+      marker_125._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_125)
+      
+      var marker_126_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_126 = L.marker([24.987728, 
+							121.5608],
+							{'icon':marker_126_icon}
+							);
+      marker_126.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#23433;&#24247;&#27665;&#30526;&#38321;&#35261;&#23460;");
+      marker_126._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_126)
+      
+      var marker_127_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_127 = L.marker([25.025435, 
+							121.545272],
+							{'icon':marker_127_icon}
+							);
+      marker_127.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#25104;&#21151;&#27665;&#30526;&#38321;&#35261;&#23460;");
+      marker_127._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_127)
+      
+      var marker_128_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_128 = L.marker([25.07894, 
+							121.577561],
+							{'icon':marker_128_icon}
+							);
+      marker_128.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#35199;&#28246;&#20998;&#39208;");
+      marker_128._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_128)
+      
+      var marker_129_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_129 = L.marker([25.032193, 
+							121.501718],
+							{'icon':marker_129_icon}
+							);
+      marker_129.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#35199;&#22290;&#20998;&#39208;");
+      marker_129._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_129)
+      
+      var marker_130_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_130 = L.marker([25.059169, 
+							121.512092],
+							{'icon':marker_130_icon}
+							);
+      marker_130.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#24310;&#24179;&#20998;&#39208;");
+      marker_130._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_130)
+      
+      var marker_131_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_131 = L.marker([25.067415, 
+							121.61261],
+							{'icon':marker_131_icon}
+							);
+      marker_131.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#26481;&#28246;&#20998;&#39208;");
+      marker_131._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_131)
+      
+      var marker_132_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_132 = L.marker([25.022722, 
+							121.498094],
+							{'icon':marker_132_icon}
+							);
+      marker_132.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#26481;&#22290;&#20998;&#39208;");
+      marker_132._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_132)
+      
+      var marker_133_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_133 = L.marker([25.049847, 
+							121.57685],
+							{'icon':marker_133_icon}
+							);
+      marker_133.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#26494;&#23665;&#20998;&#39208;");
+      marker_133._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_133)
+      
+      var marker_134_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_134 = L.marker([25.05021, 
+							121.520954],
+							{'icon':marker_134_icon}
+							);
+      marker_134.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#38263;&#23433;&#20998;&#39208;");
+      marker_134._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_134)
+      
+      var marker_135_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_135 = L.marker([25.054003, 
+							121.607753],
+							{'icon':marker_135_icon}
+							);
+      marker_135.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#21335;&#28207;&#20998;&#39208;");
+      marker_135._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_135)
+      
+      var marker_136_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_136 = L.marker([25.040328, 
+							121.530854],
+							{'icon':marker_136_icon}
+							);
+      marker_136.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#22478;&#20013;&#20998;&#39208;");
+      marker_136._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_136)
+      
+      var marker_137_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_137 = L.marker([25.057032, 
+							121.516825],
+							{'icon':marker_137_icon}
+							);
+      marker_137.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#24314;&#25104;&#20998;&#39208;");
+      marker_137._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_137)
+      
+      var marker_138_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_138 = L.marker([25.064394, 
+							121.527136],
+							{'icon':marker_138_icon}
+							);
+      marker_138.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#24646;&#23433;&#27665;&#30526;&#38321;&#35261;&#23460;");
+      marker_138._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_138)
+      
+      var marker_139_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_139 = L.marker([25.054339, 
+							121.551794],
+							{'icon':marker_139_icon}
+							);
+      marker_139.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#21855;&#26126;&#20998;&#39208;");
+      marker_139._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_139)
+      
+      var marker_140_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_140 = L.marker([25.127728, 
+							121.50736],
+							{'icon':marker_140_icon}
+							);
+      marker_140.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#28165;&#27743;&#20998;&#39208;");
+      marker_140._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_140)
+      
+      var marker_141_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_141 = L.marker([25.003607, 
+							121.536345],
+							{'icon':marker_141_icon}
+							);
+      marker_141.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#26223;&#32654;&#20998;&#39208;");
+      marker_141._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_141)
+      
+      var marker_142_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_142 = L.marker([24.990137, 
+							121.542022],
+							{'icon':marker_142_icon}
+							);
+      marker_142.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#26223;&#26032;&#20998;&#39208;");
+      marker_142._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_142)
+      
+      var marker_143_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_143 = L.marker([25.002215, 
+							121.569178],
+							{'icon':marker_143_icon}
+							);
+      marker_143.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#33836;&#33459;&#27665;&#30526;&#38321;&#35261;&#23460;");
+      marker_143._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_143)
+      
+      var marker_144_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_144 = L.marker([25.027925, 
+							121.495727],
+							{'icon':marker_144_icon}
+							);
+      marker_144.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#33836;&#33775;&#20998;&#39208;");
+      marker_144._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_144)
+      
+      var marker_145_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_145 = L.marker([24.988685, 
+							121.576501],
+							{'icon':marker_145_icon}
+							);
+      marker_145.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#33836;&#33288;&#20998;&#39208;");
+      marker_145._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_145)
+      
+      var marker_146_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_146 = L.marker([25.036893, 
+							121.495492],
+							{'icon':marker_146_icon}
+							);
+      marker_146.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#26611;&#37129;&#27665;&#30526;&#38321;&#35261;&#23460;");
+      marker_146._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_146)
+      
+      var marker_147_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_147 = L.marker([25.021577, 
+							121.544049],
+							{'icon':marker_147_icon}
+							);
+      marker_147.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#36947;&#34281;&#20998;&#39208;");
+      marker_147._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_147)
+      
+      var marker_148_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_148 = L.marker([25.140967, 
+							121.489548],
+							{'icon':marker_148_icon}
+							);
+      marker_148.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#31291;&#39321;&#20998;&#39208;");
+      marker_148._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_148)
+      
+      var marker_149_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_149 = L.marker([25.038549, 
+							121.502339],
+							{'icon':marker_149_icon}
+							);
+      marker_149.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#40845;&#23665;&#20998;&#39208;");
+      marker_149._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_149)
+      
+      var marker_150_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_150 = L.marker([25.028559, 
+							121.529601],
+							{'icon':marker_150_icon}
+							);
+      marker_150.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#40845;&#23433;&#27665;&#30526;&#38321;&#35261;&#23460;");
+      marker_150._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_150)
+      
+      var marker_151_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_151 = L.marker([25.046144, 
+							121.586757],
+							{'icon':marker_151_icon}
+							);
+      marker_151.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#40845;&#33775;&#27665;&#30526;&#38321;&#35261;&#23460;");
+      marker_151._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_151)
+      
+      var marker_152_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_152 = L.marker([25.029152, 
+							121.538369],
+							{'icon':marker_152_icon}
+							);
+      marker_152.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#32317;&#39208;");
+      marker_152._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_152)
+      
+      var marker_153_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_153 = L.marker([25.083659, 
+							121.562154],
+							{'icon':marker_153_icon}
+							);
+      marker_153.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#35199;&#20013;&#20998;&#39208;");
+      marker_153._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_153)
+      
+      var marker_154_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_154 = L.marker([25.048407, 
+							121.545756],
+							{'icon':marker_154_icon}
+							);
+      marker_154.bindPopup("&#33274;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#20013;&#23833;&#20998;&#39208;");
+      marker_154._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_154)
+      
+      var marker_155_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_155 = L.marker([25.145541, 
+							121.493219],
+							{'icon':marker_155_icon}
+							);
+      marker_155.bindPopup("&#33274;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#31168;&#23665;&#27665;&#30526;&#38321;&#35261;&#23460;");
+      marker_155._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_155)
+      
+      var marker_156_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_156 = L.marker([25.03613, 
+							121.555015],
+							{'icon':marker_156_icon}
+							);
+      marker_156.bindPopup("&#33274;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#24310;&#21513;&#27665;&#30526;&#38321;&#35261;&#23460;");
+      marker_156._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_156)
+      
+      var marker_157_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_157 = L.marker([25.082222, 
+							121.510899],
+							{'icon':marker_157_icon}
+							);
+      marker_157.bindPopup("&#33274;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#33899;&#34310;&#22581;&#20998;&#39208;");
+      marker_157._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_157)
+      
+      var marker_158_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_158 = L.marker([25.041307, 
+							121.619483],
+							{'icon':marker_158_icon}
+							);
+      marker_158.bindPopup("&#33274;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#33290;&#33674;&#20998;&#39208;");
+      marker_158._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_158)
+      
+      var marker_159_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_159 = L.marker([25.066061, 
+							121.515106],
+							{'icon':marker_159_icon}
+							);
+      marker_159.bindPopup("&#33274;&#21271;&#24066;&#31435;&#22294;&#26360;&#39208;&#34349;&#24030;&#27665;&#30526;&#38321;&#35261;&#23460;");
+      marker_159._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_159)
+      
+      var marker_160_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_160 = L.marker([25.035561, 
+							121.506588],
+							{'icon':marker_160_icon}
+							);
+      marker_160.bindPopup("&#21488;&#21271;&#24066;&#31435;&#32879;&#21512;&#37291;&#38498;&#21644;&#24179;&#38498;&#21312;");
+      marker_160._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_160)
+      
+      var marker_161_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_161 = L.marker([25.030508, 
+							121.574895],
+							{'icon':marker_161_icon}
+							);
+      marker_161.bindPopup("&#21488;&#21271;&#24066;&#31435;&#32879;&#21512;&#37291;&#38498;&#26494;&#24503;&#38498;&#21312;");
+      marker_161._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_161)
+      
+      var marker_162_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_162 = L.marker([25.05097, 
+							121.509321],
+							{'icon':marker_162_icon}
+							);
+      marker_162.bindPopup("&#21488;&#21271;&#24066;&#31435;&#32879;&#21512;&#37291;&#38498;&#20013;&#33288;&#38498;&#21312;");
+      marker_162._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_162)
+      
+      var marker_163_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_163 = L.marker([25.044324, 
+							121.50492],
+							{'icon':marker_163_icon}
+							);
+      marker_163.bindPopup("&#21488;&#21271;&#24066;&#31435;&#32879;&#21512;&#37291;&#38498;&#20013;&#37291;&#38498;&#21312;");
+      marker_163._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_163)
+      
+      var marker_164_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_164 = L.marker([25.037512, 
+							121.545224],
+							{'icon':marker_164_icon}
+							);
+      marker_164.bindPopup("&#21488;&#21271;&#24066;&#31435;&#32879;&#21512;&#37291;&#38498;&#20161;&#24859;&#38498;&#21312;");
+      marker_164._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_164)
+      
+      var marker_165_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_165 = L.marker([25.029082, 
+							121.519268],
+							{'icon':marker_165_icon}
+							);
+      marker_165.bindPopup("&#21488;&#21271;&#24066;&#31435;&#32879;&#21512;&#37291;&#38498;&#21644;&#24179;&#23142;&#24188;&#38498;&#21312;");
+      marker_165._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_165)
+      
+      var marker_166_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_166 = L.marker([25.046533, 
+							121.586075],
+							{'icon':marker_166_icon}
+							);
+      marker_166.bindPopup("&#21488;&#21271;&#24066;&#31435;&#32879;&#21512;&#37291;&#38498;&#24544;&#23389;&#38498;&#21312;");
+      marker_166._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_166)
+      
+      var marker_167_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_167 = L.marker([25.044324, 
+							121.50492],
+							{'icon':marker_167_icon}
+							);
+      marker_167.bindPopup("&#21488;&#21271;&#24066;&#31435;&#32879;&#21512;&#37291;&#38498;&#26118;&#26126;&#30142;&#30149;&#31649;&#21046;&#38498;&#21312;");
+      marker_167._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_167)
+      
+      var marker_168_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_168 = L.marker([25.063291, 
+							121.525628],
+							{'icon':marker_168_icon}
+							);
+      marker_168.bindPopup("&#21488;&#21271;&#24066;&#31435;&#32879;&#21512;&#37291;&#38498;&#26519;&#26862;&#20013;&#37291;&#38498;&#21312;");
+      marker_168._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_168)
+      
+      var marker_169_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_169 = L.marker([25.105333, 
+							121.531762],
+							{'icon':marker_169_icon}
+							);
+      marker_169.bindPopup("&#21488;&#21271;&#24066;&#31435;&#32879;&#21512;&#37291;&#38498;&#38525;&#26126;&#38498;&#21312;");
+      marker_169._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_169)
+      
+      var marker_170_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_170 = L.marker([25.038234, 
+							121.519291],
+							{'icon':marker_170_icon}
+							);
+      marker_170.bindPopup("&#21488;&#21271;&#24066;&#31435;&#20013;&#27491;&#36939;&#21205;&#20013;&#24515;");
+      marker_170._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_170)
+      
+      var marker_171_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_171 = L.marker([25.047408, 
+							121.506753],
+							{'icon':marker_171_icon}
+							);
+      marker_171.bindPopup("&#21488;&#21271;&#24066;&#31435;&#33836;&#33775;&#36939;&#21205;&#20013;&#24515;");
+      marker_171._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_171)
+      
+      var marker_172_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_172 = L.marker([24.997445, 
+							121.559465],
+							{'icon':marker_172_icon}
+							);
+      marker_172.bindPopup("&#21488;&#21271;&#24066;&#31435;&#25991;&#23665;&#36939;&#21205;&#20013;&#24515;");
+      marker_172._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_172)
+      
+      var marker_173_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_173 = L.marker([25.020777, 
+							121.545636],
+							{'icon':marker_173_icon}
+							);
+      marker_173.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22823;&#23433;&#36939;&#21205;&#20013;&#24515;");
+      marker_173._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_173)
+      
+      var marker_174_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_174 = L.marker([25.031866, 
+							121.566678],
+							{'icon':marker_174_icon}
+							);
+      marker_174.bindPopup("&#21488;&#21271;&#24066;&#31435;&#20449;&#32681;&#36939;&#21205;&#20013;&#24515;");
+      marker_174._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_174)
+      
+      var marker_175_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_175 = L.marker([25.048938, 
+							121.58184],
+							{'icon':marker_175_icon}
+							);
+      marker_175.bindPopup("&#21488;&#21271;&#24066;&#31435;&#21335;&#28207;&#36939;&#21205;&#20013;&#24515;");
+      marker_175._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_175)
+      
+      var marker_176_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_176 = L.marker([25.048607, 
+							121.550231],
+							{'icon':marker_176_icon}
+							);
+      marker_176.bindPopup("&#21488;&#21271;&#24066;&#31435;&#26494;&#23665;&#36939;&#21205;&#20013;&#24515;");
+      marker_176._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_176)
+      
+      var marker_177_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_177 = L.marker([25.078266, 
+							121.575229],
+							{'icon':marker_177_icon}
+							);
+      marker_177.bindPopup("&#21488;&#21271;&#24066;&#31435;&#20839;&#28246;&#36939;&#21205;&#20013;&#24515;");
+      marker_177._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_177)
+      
+      var marker_178_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_178 = L.marker([25.05489, 
+							121.521393],
+							{'icon':marker_178_icon}
+							);
+      marker_178.bindPopup("&#21488;&#21271;&#24066;&#31435;&#20013;&#23665;&#36939;&#21205;&#20013;&#24515;");
+      marker_178._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_178)
+      
+      var marker_179_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_179 = L.marker([25.065281, 
+							121.516175],
+							{'icon':marker_179_icon}
+							);
+      marker_179.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22823;&#21516;&#36939;&#21205;&#20013;&#24515;");
+      marker_179._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_179)
+      
+      var marker_180_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_180 = L.marker([25.089668, 
+							121.521411],
+							{'icon':marker_180_icon}
+							);
+      marker_180.bindPopup("&#21488;&#21271;&#24066;&#31435;&#22763;&#26519;&#36939;&#21205;&#20013;&#24515;");
+      marker_180._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_180)
+      
+      var marker_181_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_181 = L.marker([25.116473, 
+							121.509762],
+							{'icon':marker_181_icon}
+							);
+      marker_181.bindPopup("&#21488;&#21271;&#24066;&#31435;&#21271;&#25237;&#36939;&#21205;&#20013;&#24515;");
+      marker_181._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_181)
+      
+      var marker_182_icon = L.AwesomeMarkers.icon({ icon: 'info-sign',markerColor: 'blue',prefix: 'glyphicon',extraClasses: 'fa-rotate-0'});
+      var marker_182 = L.marker([25.037525, 
+							121.563782],
+							{'icon':marker_182_icon}
+							);
+      marker_182.bindPopup("&#33274;&#21271;&#24066;&#25919;&#24220;&#22823;&#27155;");
+      marker_182._popup.options.maxWidth = 300;
+      clusteredmarkers.addLayer(marker_182)
+      
+      //add the clustered markers to the group anyway
+      map.addLayer(clusteredmarkers);
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+
+
+   </script>
+
+</body>
