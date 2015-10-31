@@ -5,3 +5,5 @@ Plot positions of toilet, trash can, free wifi and drinking water on map for tou
 [folium](https://github.com/python-visualization/folium)
 
 [xmltodict](https://github.com/martinblech/xmltodict)
+
+[pandas](https://github.com/pydata/pandas)
