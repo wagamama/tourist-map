@@ -16,3 +16,12 @@ Plot positions of toilet, trash can, free wifi and drinking water on map for tou
 [xmltodict](https://github.com/martinblech/xmltodict)
 
 [pandas](https://github.com/pydata/pandas)
+
+# Generated map
+[臺北市公共場所飲水機資訊](http://wagamama.github.io/tourist-map/water.html)
+
+[臺北市行人專用清潔箱](http://wagamama.github.io/tourist-map/trash_can.html)
+
+[臺北市公眾區免費無線上網熱點資料(新版)](http://wagamama.github.io/tourist-map/wifi.html)
+
+[臺北市公廁點位資訊](http://wagamama.github.io/tourist-map/toilet.html)
